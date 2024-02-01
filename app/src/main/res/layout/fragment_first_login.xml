@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="10dp"
+    android:paddingVertical="40dp"
+    tools:context=".FirstLoginFragment">
+
+    <TextView
+        android:id="@+id/TVTitleFirstLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The fragment will be shown if there is no user_file in the internal storage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TVFirstLoginInstruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Hi, first login?\nKindly enter your username..."
+        app:layout_constraintTop_toBottomOf="@id/TVTitleFirstLogin"
+        app:layout_constraintBottom_toTopOf="@id/ETusername"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/BtnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Submit Username"
+        app:layout_constraintEnd_toEndOf="@+id/ETusername"
+        app:layout_constraintStart_toStartOf="@+id/ETusername"
+        app:layout_constraintTop_toBottomOf="@+id/ETusername" />
+
+    <EditText
+        android:id="@+id/ETusername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/TVTitleFirstLogin"
+        app:layout_constraintStart_toStartOf="@+id/TVTitleFirstLogin"
+        app:layout_constraintTop_toBottomOf="@+id/TVFirstLoginInstruction" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

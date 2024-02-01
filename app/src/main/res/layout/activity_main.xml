@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="40dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/TVWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome User!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.175" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/FCVCreateUser"
+        android:name="com.example.mad_practical8.FirstLoginFragment"
+        android:layout_width="360dp"
+        android:layout_height="525dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TVTitle" />
+
+    <TextView
+        android:id="@+id/TVTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(App-Specific Storage)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TVWelcome" />
+
+    <Button
+        android:id="@+id/BtnViewGallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gallery (SHARED STORAGE)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FCVCreateUser" />
+
+    <Button
+        android:id="@+id/BtnSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Settings (PREFERENCES)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BtnViewGallery" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
